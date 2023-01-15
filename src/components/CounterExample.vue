@@ -10,11 +10,11 @@
       px-8
       py-2
       rounded-full
-      bg-green-600
-      text-green-200
+      bg-gray-600
+      text-white
       max-w-max
       shadow-sm
-      hover:shadow-md
+      hover:shadow-lg
       focus:outline-none
     "
   >
@@ -30,8 +30,9 @@
       px-4
       py-1
       rounded-full
-      bg-green-200
-      text-green-600
+      border
+      border-gray-300
+      text-gray-500
       max-w-max
       shadow-sm
       hover:shadow-md
