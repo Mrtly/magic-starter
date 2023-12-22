@@ -1,18 +1,21 @@
 <template>
-<div class="text-center mt-10">
-  <img class="m-auto" alt="Vue logo" src="./assets/logo.png" /> 
-  <CounterExample msg="simple counter in Vue 3 + Vite + TypeScript + Tailwind" />
-</div>
+  <div class="min-h-screen w-full bg-slate-100 p-6">
+    <div class="mt-10 flex flex-col items-center gap-10 text-center">
+      <h1 class="text-3xl font-semibold text-teal-900">
+        Vue + Vite + TS starter
+      </h1>
+      <Button @click="increment">count is {{ count }}</Button>
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import CounterExample from "./components/CounterExample.vue";
+<script setup lang="ts">
+import { ref } from "vue";
+import Button from "./components/Button.vue";
 
-export default defineComponent({
-  name: "App",
-  components: {
-    CounterExample,
-  },
-});
+const count = ref(0);
+
+function increment() {
+  count.value++;
+}
 </script>
